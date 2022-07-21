@@ -1,0 +1,28 @@
+{% extends 'trello_app/base.html' %}
+
+{%block title %}
+Trello App
+{% endblock %}
+
+
+{% block content %}
+
+<h1>
+    All Task Lists
+</h1>
+{% for list in lists %}
+<li>
+    {{list.name}}
+</li>
+{% endfor %}
+
+<h1>
+    All Tasks
+</h1>
+{% for task in tasks %}
+<li>
+    {{task.name}}
+</li>
+{% endfor %}
+
+{% endblock %}

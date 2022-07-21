@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My PortFolio -Project</title>
+</head>
+<body>
+    <div class="projects-title">
+    <h1>
+        <center>
+            My Projects
+        </center>
+        </h1>
+    </div>
+    <!-- Loop over all projects-->
+    {% for prj in all_my_projects %}
+    <h2>
+        <center>
+            <a href="project/{{ prj.id}}">
+            {{prj.name}}
+            </a>
+        </center>
+    </h2>
+    {% endfor %}
+</body>
+</html>
